@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    myApp()
                 }
             }
         }
@@ -32,14 +32,13 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun myApp() {
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     Parcial1_PedroTheme {
-        Greeting("Android")
+        myApp()
     }
 }
