@@ -10,9 +10,16 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
+import edu.ucne.parcial1_pedro.ui.theme.Componentes.Registro
+import edu.ucne.parcial1_pedro.ui.theme.Componentes.listado
 import edu.ucne.parcial1_pedro.ui.theme.Parcial1_PedroTheme
+import edu.ucne.parcial1_pedro.utlis.Screen
+
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +40,19 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun myApp() {
+    val navHostController = rememberNavController()
+    NavHost(navController = navHostController,
+        startDestination = Screen.ListadoScreen.route){
+
+        composable(route = Screen.ListadoScreen.route){
+            listado(goToRegistro = {navHostController.navigate(Screen.RegistroScreen.route)})
+        }
+
+        composable(route = Screen.RegistroScreen.route){
+            Registro(backToListado = {navHostController.navigate(Screen.ListadoScreen.route)})
+        }
+    }
+
 }
 
 @Preview(showBackground = true)
