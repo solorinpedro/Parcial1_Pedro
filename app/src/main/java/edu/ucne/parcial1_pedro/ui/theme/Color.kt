@@ -1,4 +1,4 @@
-package edu.ucne.parcial1_pedro.ui.theme
+package edu.ucne.parcial1_pedro.utlis.theme
 
 import androidx.compose.ui.graphics.Color
 

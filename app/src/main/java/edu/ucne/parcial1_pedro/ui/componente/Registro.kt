@@ -2,7 +2,6 @@ package edu.ucne.parcial1_pedro.ui.theme.Componentes
 
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.SaveAs
 import androidx.compose.runtime.Composable
 

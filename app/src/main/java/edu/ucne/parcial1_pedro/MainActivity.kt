@@ -6,19 +6,17 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
 import edu.ucne.parcial1_pedro.ui.theme.Componentes.Registro
 import edu.ucne.parcial1_pedro.ui.theme.Componentes.listado
-import edu.ucne.parcial1_pedro.ui.theme.Parcial1_PedroTheme
-import edu.ucne.parcial1_pedro.utlis.Screen
+import edu.ucne.parcial1_pedro.utlis.theme.Parcial1_PedroTheme
+import edu.ucne.parcial1_pedro.util.Screen
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {

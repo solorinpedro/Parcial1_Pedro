@@ -1,4 +1,4 @@
-package edu.ucne.parcial1_pedro.utlis
+package edu.ucne.parcial1_pedro.util
 
 sealed class Screen(val route: String) {
     object RegistroScreen: Screen("RegistroScreen")
