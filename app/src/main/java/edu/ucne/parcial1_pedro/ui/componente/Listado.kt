@@ -28,6 +28,7 @@ fun listado(goToRegistro:() -> Unit){
 
     ){it
 
+
     }
 
 }

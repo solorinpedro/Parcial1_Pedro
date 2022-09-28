@@ -8,7 +8,7 @@ import edu.ucne.parcial1_pedro.data.local.entity.Persona
     entities = [
         Persona::class],
     exportSchema = false,
-    version = 1
+    version = 2
 )
 abstract class PersonasDb : RoomDatabase() {
 }
