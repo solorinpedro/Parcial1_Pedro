@@ -15,11 +15,7 @@ interface ArticuloDao {
     suspend fun Insertar(articulo: Articulo)
 
         @Query(
-            """
-            SELECT *
-            FROM Articulos
-|           ORDER BY articuloId
-|           """
+            " SELECT * FROM Articulos ORDER BY articuloId"
         )
         fun Lista():Flow<List<Articulo>>
 }
