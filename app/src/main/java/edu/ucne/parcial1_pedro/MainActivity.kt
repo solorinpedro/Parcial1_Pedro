@@ -40,14 +40,14 @@ class MainActivity : ComponentActivity() {
 fun myApp() {
     val navHostController = rememberNavController()
     NavHost(navController = navHostController,
-        startDestination = Screen.ListadoScreen.route){
+        startDestination = Screen.ListadoArticulosScreen.route){
 
-        composable(route = Screen.ListadoScreen.route){
-            listado(goToRegistro = {navHostController.navigate(Screen.RegistroScreen.route)})
+        composable(route = Screen.ListadoArticulosScreen.route){
+            listado(goToRegistro = {navHostController.navigate(Screen.RegistroArticulosScreen.route)})
         }
 
-        composable(route = Screen.RegistroScreen.route){
-            Registro(backToListado = {navHostController.navigate(Screen.ListadoScreen.route)})
+        composable(route = Screen.RegistroArticulosScreen.route){
+            Registro(backToListado = {navHostController.navigate(Screen.ListadoArticulosScreen.route)})
         }
     }
 

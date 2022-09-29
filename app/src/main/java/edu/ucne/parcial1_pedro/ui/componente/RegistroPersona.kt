@@ -31,7 +31,7 @@ fun Registro(backToListado:() -> Unit, viewModel: ArticuloViewModel = hiltViewMo
 
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text(text = "Registro") })
+            TopAppBar(title = { Text(text = "Registro de Articulos") })
         },
 
         floatingActionButton = {
@@ -51,10 +51,14 @@ fun Registro(backToListado:() -> Unit, viewModel: ArticuloViewModel = hiltViewMo
 
                     if(viewModel.Existencia == ""){
                         Toast.makeText(context, "La existencia no  debe estar vacia y debe de ser mayor a 0", Toast.LENGTH_SHORT).show()
+                    }else{
+                        if(!viewModel.Existencia.isDigitsOnly()){
+                            Toast.makeText(context, "La existencia no  debe ser una letra", Toast.LENGTH_SHORT).show()
+                        }
                     }
 
                     if(!validarDescripcion && !validarMarca && !validarExistencia){
-                        if(viewModel.Existencia.toDouble() > 0 && viewModel.Existencia.isDigitsOnly()){
+                        if(viewModel.Existencia.isDigitsOnly() && viewModel.Existencia.toDouble() > 0 ){
                             viewModel.Guardar()
                             Toast.makeText(context, "Guardado", Toast.LENGTH_SHORT).show()
                             backToListado()
